@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.8.10 on win32)" generated="2024-12-12T00:12:29.828473" rpa="false" schemaversion="5">
+<suite id="s1" name="Saucedemo Tests" source="C:\Users\Aziza\Desktop\Projects\SideProjects\SauceDemoTest\saucedemo_tests.robot">
+<test id="s1-t1" name="Login Validation" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:30.581403" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:12:30.580856" elapsed="7.977005"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:38.558858" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:38.558858" elapsed="0.158001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:38.718857" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:38.717862" elapsed="0.124996"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:38.843859" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:38.843859" elapsed="0.144003"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:39.008860" level="INFO">Current location contains 'inventory.html'.</msg>
+<arg>inventory.html</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2024-12-12T00:12:38.987862" elapsed="0.020998"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:39.010864" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:12:39.009861" elapsed="4.343420"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:43.355281" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${LOCKED_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:43.355281" elapsed="0.164000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:43.520281" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:43.520281" elapsed="0.153999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:43.675278" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:43.675278" elapsed="0.166001"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:43.843278" level="INFO">Verifying element 'css:h3[data-test='error']' contains exact text 'Epic sadface: Sorry, this user has been locked out.'.</msg>
+<arg>css:h3[data-test='error']</arg>
+<arg>Epic sadface: Sorry, this user has been locked out.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-12-12T00:12:43.842278" elapsed="0.053001"/>
+</kw>
+<error>
+<msg time="2024-12-12T00:12:43.896280" level="FAIL">Setting 'Teardown' is allowed only once. Only the first value is used.</msg>
+<value>[Teardown]</value>
+<status status="FAIL" start="2024-12-12T00:12:43.896280" elapsed="0.000000">Setting 'Teardown' is allowed only once. Only the first value is used.</status>
+</error>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:12:43.897279" elapsed="2.263705"/>
+</kw>
+<doc>Verify valid and invalid login scenarios</doc>
+<status status="FAIL" start="2024-12-12T00:12:30.578689" elapsed="15.582295">Setting 'Teardown' is allowed only once. Only the first value is used.</status>
+</test>
+<test id="s1-t2" name="Remove From Cart" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:46.163982" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:12:46.162983" elapsed="3.223693"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:49.388678" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:49.387676" elapsed="0.155547"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:49.544223" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:49.543223" elapsed="0.155001"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:49.699227" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:49.699227" elapsed="0.177130"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:49.877357" level="INFO">Clicking button 'css:button[name*='add-to-cart']'.</msg>
+<arg>css:button[name*='add-to-cart']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:49.877357" elapsed="0.180002"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:50.058356" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:50.057359" elapsed="0.092000"/>
+</kw>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:50.169362" level="INFO">${REMOVE_BUTTON} = &lt;selenium.webdriver.remote.webelement.WebElement (session="cb42a9731ec91821f97716a12cc2aff1", element="f.CB911B4E7E77C2906880F64E4007FC12.d.A283E44D5BCCBFE3F420648DCF17D40D.e.45")&gt;</msg>
+<var>${REMOVE_BUTTON}</var>
+<arg>css:button[name*='remove']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:50.151357" elapsed="0.018005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:50.170355" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cb42a9731ec91821f97716a12cc2aff1", element="f.CB911B4E7E77C2906880F64E4007FC12.d.A283E44D5BCCBFE3F420648DCF17D40D.e.45")&gt;'.</msg>
+<arg>${REMOVE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:50.170355" elapsed="0.061002"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Not Exist">
+<msg time="2024-12-12T00:12:50.235354" level="FAIL">No keyword with name 'Element Should Not Exist' found.</msg>
+<arg>css:button[name*='remove']</arg>
+<status status="FAIL" start="2024-12-12T00:12:50.235354" elapsed="0.000000">No keyword with name 'Element Should Not Exist' found.</status>
+</kw>
+<msg time="2024-12-12T00:12:50.235354" level="INFO">${IS_REMOVED} = False</msg>
+<var>${IS_REMOVED}</var>
+<arg>Element Should Not Exist</arg>
+<arg>css:button[name*='remove']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-12T00:12:50.232357" elapsed="0.002997"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<msg time="2024-12-12T00:12:50.236354" level="FAIL">'False' should be true.</msg>
+<arg>${IS_REMOVED}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="FAIL" start="2024-12-12T00:12:50.236354" elapsed="0.000000">'False' should be true.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:12:50.237355" elapsed="2.296570"/>
+</kw>
+<doc>Ensure items cannot be removed from the cart due to a potential bug</doc>
+<status status="FAIL" start="2024-12-12T00:12:46.162983" elapsed="6.371944">'False' should be true.</status>
+</test>
+<test id="s1-t3" name="Checkout Form Validation" line="41">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:52.536926" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:12:52.536926" elapsed="2.984677"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:55.522600" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:55.521603" elapsed="0.163997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:55.686599" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:55.686599" elapsed="0.126004"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:55.813601" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:55.813601" elapsed="0.148999"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:55.964600" level="INFO">Clicking button 'css:button[name*='add-to-cart']'.</msg>
+<arg>css:button[name*='add-to-cart']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:55.963601" elapsed="0.186006"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:56.150600" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.150600" elapsed="0.087003"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:56.238600" level="INFO">Clicking button 'id:checkout'.</msg>
+<arg>id:checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.238600" elapsed="0.100001"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:56.339602" level="INFO">Typing text 'John' into text field 'id:first-name'.</msg>
+<arg>id:first-name</arg>
+<arg>John</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.339602" elapsed="0.103002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:56.443603" level="INFO">Typing text '12345' into text field 'id:postal-code'.</msg>
+<arg>id:postal-code</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.442604" elapsed="0.094005"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:56.537603" level="INFO">Clicking button 'id:continue'.</msg>
+<arg>id:continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.537603" elapsed="0.161998"/>
+</kw>
+<kw name="Location Should Not Contain">
+<msg time="2024-12-12T00:12:56.721600" level="FAIL">No keyword with name 'Location Should Not Contain' found. Did you mean:
+    SeleniumLibrary.Location Should Contain</msg>
+<arg>checkout-step-two.html</arg>
+<status status="FAIL" start="2024-12-12T00:12:56.721600" elapsed="0.000000">No keyword with name 'Location Should Not Contain' found. Did you mean:
+    SeleniumLibrary.Location Should Contain</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:12:56.722602" elapsed="2.247499"/>
+</kw>
+<doc>Verify checkout form behavior</doc>
+<status status="FAIL" start="2024-12-12T00:12:52.535927" elapsed="6.450171">No keyword with name 'Location Should Not Contain' found. Did you mean:
+    SeleniumLibrary.Location Should Contain</status>
+</test>
+<test id="s1-t4" name="Image Loading Validation" line="56">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:12:58.996084" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:12:58.995084" elapsed="7.584573"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:06.584656" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-12T00:13:06.589659" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6733F6CC5+28821]
+	(No symbol) [0x00007FF673363850]
+	(No symbol) [0x00007FF67320578A]
+	(No symbol) [0x00007FF6731F230C]
+	(No symbol) [0x00007FF6731F21D0]
+	(No symbol) [0x00007FF673208131]
+	(No symbol) [0x00007FF67329ED12]
+	(No symbol) [0x00007FF67327F0A3]
+	(No symbol) [0x00007FF67324A778]
+	(No symbol) [0x00007FF67324B8E1]
+	GetHandleVerifier [0x00007FF67372FCCD+3408029]
+	GetHandleVerifier [0x00007FF67374743F+3504143]
+	GetHandleVerifier [0x00007FF67373B61D+3455469]
+	GetHandleVerifier [0x00007FF6734BBDCB+835995]
+	(No symbol) [0x00007FF67336EB6F]
+	(No symbol) [0x00007FF67336A824]
+	(No symbol) [0x00007FF67336A9BD]
+	(No symbol) [0x00007FF67335A1A9]
+	BaseThreadInitThunk [0x00007FF94BBD7374+20]
+	RtlUserThreadStart [0x00007FF94BF3CC91+33]
+</msg>
+<msg time="2024-12-12T00:13:06.594659" level="FAIL">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6733F6CC5+28821]
+	(No symbol) [0x00007FF673363850]
+	(No symbol) [0x00007FF67320578A]
+	(No symbol) [0x00007FF6731F230C]
+	(No symbol) [0x00007FF6731F21D0]
+	(No symbol) [0x00007FF673208131]
+	(No symbol) [0x00007FF67329ED12]
+	(No symbol) [0x00007FF67327F0A3]
+	(No symbol) [0x00007FF67324A778]
+	(No symbol) [0x00007FF67324B8E1]
+	GetHandleVerifier [0x00007FF67372FCCD+3408029]
+	GetHandleVerifier [0x00007FF67374743F+3504143]
+	GetHandleVerifier [0x00007FF67373B61D+3455469]
+	GetHandleVerifier [0x00007FF6734BBDCB+835995]
+	(No symbol) [0x00007FF67336EB6F]
+	(No symbol) [0x00007FF67336A824]
+	(No symbol) [0x00007FF67336A9BD]
+	(No symbol) [0x00007FF67335A1A9]
+	BaseThreadInitThunk [0x00007FF94BBD7374+20]
+	RtlUserThreadStart [0x00007FF94BF3CC91+33]
+</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-12-12T00:13:06.583657" elapsed="0.016001">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6733F6CC5+28821]
+	(No symbol) [0x00007FF673363850]
+	(No symbol) [0x00007FF67320578A]
+	(No symbol) [0x00007FF6731F230C]
+	(No symbol) [0x00007FF6731F21D0]
+	(No symbol) [0x00007FF673208131]
+	(No symbol) [0x00007FF67329ED12]
+	(No symbol) [0x00007FF67327F0A3]
+	(No symbol) [0x00007FF67324A778]
+	(No symbol) [0x00007FF67324B8E1]
+	GetHandleVerifier [0x00007FF67372FCCD+3408029]
+	GetHandleVerifier [0x00007FF67374743F+3504143]
+	GetHandleVerifier [0x00007FF67373B61D+3455469]
+	GetHandleVerifier [0x00007FF6734BBDCB+835995]
+	(No symbol) [0x00007FF67336EB6F]
+	(No symbol) [0x00007FF67336A824]
+	(No symbol) [0x00007FF67336A9BD]
+	(No symbol) [0x00007FF67335A1A9]
+	BaseThreadInitThunk [0x00007FF94BBD7374+20]
+	RtlUserThreadStart [0x00007FF94BF3CC91+33]
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:13:06.600660" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:13:06.600660" elapsed="0.000000"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<var>${IMAGES}</var>
+<arg>tag:img</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:13:06.601661" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${ALL_LOADED}</var>
+<arg>all(img.get_attribute('src') for img in ${IMAGES})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-12-12T00:13:06.602658" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${ALL_LOADED}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2024-12-12T00:13:06.603657" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:13:06.604657" elapsed="5.749141"/>
+</kw>
+<doc>Verify product images load correctly</doc>
+<status status="FAIL" start="2024-12-12T00:12:58.994084" elapsed="13.360715">WebDriverException: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6733F6CC5+28821]
+	(No symbol) [0x00007FF673363850]
+	(No symbol) [0x00007FF67320578A]
+	(No symbol) [0x00007FF6731F230C]
+	(No symbol) [0x00007FF6731F21D0]
+	(No symbol) [0x00007FF673208131]
+	(No symbol) [0x00007FF67329ED12]
+	(No symbol) [0x00007FF67327F0A3]
+	(No symbol) [0x00007FF67324A778]
+	(No symbol) [0x00007FF67324B8E1]
+	GetHandleVerifier [0x00007FF67372FCCD+3408029]
+	GetHandleVerifier [0x00007FF67374743F+3504143]
+	GetHandleVerifier [0x00007FF67373B61D+3455469]
+	GetHandleVerifier [0x00007FF6734BBDCB+835995]
+	(No symbol) [0x00007FF67336EB6F]
+	(No symbol) [0x00007FF67336A824]
+	(No symbol) [0x00007FF67336A9BD]
+	(No symbol) [0x00007FF67335A1A9]
+	BaseThreadInitThunk [0x00007FF94BBD7374+20]
+	RtlUserThreadStart [0x00007FF94BF3CC91+33]
+</status>
+</test>
+<test id="s1-t5" name="Checkout Button with Empty Cart" line="67">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:12.360820" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:13:12.360820" elapsed="2.579814"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:14.941633" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:13:14.940634" elapsed="0.142999"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:15.084632" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.084632" elapsed="0.115002"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:15.201634" level="INFO">Clicking button 'id:login-button'.</msg>
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.200633" elapsed="0.357114"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:15.558749" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.558749" elapsed="0.071998"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>id:checkout</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.631748" elapsed="0.022998"/>
+</kw>
+<msg time="2024-12-12T00:13:15.654746" level="INFO">${IS_ENABLED} = True</msg>
+<var>${IS_ENABLED}</var>
+<arg>Element Should Be Enabled</arg>
+<arg>id:checkout</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.631748" elapsed="0.022998"/>
+</kw>
+<kw name="Should Be False">
+<msg time="2024-12-12T00:13:15.656744" level="FAIL">No keyword with name 'Should Be False' found.</msg>
+<arg>${IS_ENABLED}</arg>
+<status status="FAIL" start="2024-12-12T00:13:15.656744" elapsed="0.000000">No keyword with name 'Should Be False' found.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:13:15.656744" elapsed="2.199039"/>
+</kw>
+<doc>Verify the checkout button is disabled with an empty cart</doc>
+<status status="FAIL" start="2024-12-12T00:13:12.359814" elapsed="5.496982">No keyword with name 'Should Be False' found.</status>
+</test>
+<test id="s1-t6" name="Sorting Functionality" line="78">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:13:17.859811" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-12T00:13:17.859811" elapsed="54.333303"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-12T00:14:12.195114" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<msg time="2024-12-12T00:14:15.198161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-12T00:14:15.199160" level="FAIL">Element with locator 'id:user-name' not found.</msg>
+<arg>id:user-name</arg>
+<arg>${VALID_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-12-12T00:14:12.194114" elapsed="3.005046">Element with locator 'id:user-name' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${VALID_PASS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.200161" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.201158" elapsed="0.000000"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>class:product_sort_container</arg>
+<arg>lohi</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.201158" elapsed="0.001003"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<var>${PRICES}</var>
+<arg>class:inventory_item_price</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.202161" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<var>${PRICE_VALUES}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.203159" elapsed="0.000000"/>
+</kw>
+<kw name=":FOR">
+<arg>${PRICE}</arg>
+<arg>IN</arg>
+<arg>@{PRICES}</arg>
+<status status="NOT RUN" start="2024-12-12T00:14:15.203159" elapsed="0.001000"/>
+</kw>
+<kw name="\">
+<arg>${VALUE}=</arg>
+<arg>Replace String</arg>
+<arg>${PRICE.text}</arg>
+<arg>$</arg>
+<status status="NOT RUN" start="2024-12-12T00:14:15.204159" elapsed="0.000000"/>
+</kw>
+<kw name="\">
+<arg>Append To List</arg>
+<arg>${PRICE_VALUES}</arg>
+<arg>${VALUE}</arg>
+<status status="NOT RUN" start="2024-12-12T00:14:15.205159" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${SORTED}</var>
+<arg>sorted(${PRICE_VALUES}) == ${PRICE_VALUES}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.205159" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${SORTED}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2024-12-12T00:14:15.205159" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-12-12T00:14:15.206162" elapsed="2.425243"/>
+</kw>
+<doc>Verify sorting by price (low to high)</doc>
+<status status="FAIL" start="2024-12-12T00:13:17.858801" elapsed="59.773608">Element with locator 'id:user-name' not found.</status>
+</test>
+<status status="FAIL" start="2024-12-12T00:12:29.838471" elapsed="107.799936"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="6" skip="0" id="s1" name="Saucedemo Tests">Saucedemo Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-12T00:13:06.589659" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.109)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6733F6CC5+28821]
+	(No symbol) [0x00007FF673363850]
+	(No symbol) [0x00007FF67320578A]
+	(No symbol) [0x00007FF6731F230C]
+	(No symbol) [0x00007FF6731F21D0]
+	(No symbol) [0x00007FF673208131]
+	(No symbol) [0x00007FF67329ED12]
+	(No symbol) [0x00007FF67327F0A3]
+	(No symbol) [0x00007FF67324A778]
+	(No symbol) [0x00007FF67324B8E1]
+	GetHandleVerifier [0x00007FF67372FCCD+3408029]
+	GetHandleVerifier [0x00007FF67374743F+3504143]
+	GetHandleVerifier [0x00007FF67373B61D+3455469]
+	GetHandleVerifier [0x00007FF6734BBDCB+835995]
+	(No symbol) [0x00007FF67336EB6F]
+	(No symbol) [0x00007FF67336A824]
+	(No symbol) [0x00007FF67336A9BD]
+	(No symbol) [0x00007FF67335A1A9]
+	BaseThreadInitThunk [0x00007FF94BBD7374+20]
+	RtlUserThreadStart [0x00007FF94BF3CC91+33]
+</msg>
+</errors>
+</robot>
