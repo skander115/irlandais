@@ -11,6 +11,7 @@ def test_sorting_functionality(driver,username):
     driver.find_element(By.ID, "password").send_keys("secret_sauce")
     driver.find_element(By.ID, "login-button").click()
 
+
     select = Select(driver.find_element(By.CLASS_NAME, "product_sort_container"))
     select.select_by_value("lohi")
 
